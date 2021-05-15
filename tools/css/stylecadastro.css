@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url("../fonts/Open_Sans/OpenSans-light.ttf");
+	font-size: 1em;
+}
+
+/*CSS Geral*/
+body {
+    font-family: 'OpenSansLight';
+    font-size: 20px;
+    /*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundLogin.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+/*CSS da parte de Cadastro*/
+section .form_cadastro{
+    font-size: 18px;
+    background-color: rgba(0,0,0, .7);
+    width: 1000px;
+    height: 880px;
+    position: relative;
+    top: 50px;
+    border-radius: 20px 40px;
+    color: white;
+}
+section .row {
+    position: relative;
+    top: 200px;
+    left: -200px;
+}
+section .icon-cad{
+    position: relative;
+    width: 480px;
+    height: 180px;
+    border-bottom: 1px solid white;
+    font-size: 120px;
+    bottom: 200px;
+    left: 455px;
+    color: 	#DCDCDC;
+}
+section .form-group{
+    background-color: rgba(0,0,0, .7);
+}
+
+section .file-input{
+    position: relative;
+    top: 20px;
+}
+section .botao-submit{
+    position: relative;
+    top: 50px;
+}
+section .footer-form h4{
+    position: relative; 
+    font-size: 12px;
+    top: 90px;
+    left: 620px;
+}

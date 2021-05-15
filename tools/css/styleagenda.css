@@ -1,0 +1,241 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url("../fonts/Open_Sans/OpenSans-light.ttf");
+	font-size: 1em;
+}
+
+body {
+	font-family: 'OpenSansLight';
+	font-size: 20px;
+}
+/*As diferentes imagens para wallpaper, o usuario escolhe*/
+.wallpaperPadrao{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper1{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper2{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper3{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper4{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda4.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper5{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda5.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+.wallpaper6{
+	/*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundAgenda/backgroundAgenda6.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+header {
+	z-index: 3;
+	font-family: 'OpenSansLight';
+	font-size: 20px;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0,0,0, .7);
+	/*
+	border-bottom: 1px solid #A9A9A9;
+	*/
+	z-index: 2;
+	position: relative;
+}
+header .logo-header{
+	position: relative;
+	right: 25px;
+	width: 210px;
+	height: 60px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+/*CSS do dropbox do header, com os guias.*/
+a .dropdown-item{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display:block;
+    text-decoration:none;
+	color:#FFFFFF;
+	z-index: 20;
+}
+a .span-top{
+    display:none; /* Aqui você define que todo SPAN que estiver dentro de um A estará invisível */
+}
+a:hover .span-top{
+    display:block; /* Aqui você diz que ao passar o mouse sobre o link, colocar um display no span dentro desse link */
+    position:absolute; /* Para você poder posicionar ao queira, sem quebrar o layour em volta */
+    top: 0px; /* Para ficar na mesma altura do link */
+    right: 100%; /* Empurra a imagem para fora do link, ficando ao seu lado */
+	/*border:1px #CCCCCC solid; Estilo extra, lembrando que você pode colocar qualquer estilo nesse elemento */
+}
+.foto-perfil{
+    border-radius: 10px;
+}
+
+/* Efeito de aumentar as coisas quando passar o mouse.*/
+.efeito-logotipo{
+	width: 240px;
+	height: 110px;
+	size: 20px;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+	transition-duration: 1s;
+}
+.efeito-title{
+	zoom: 1.20;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+}
+.efeito-foto-usuario{
+	width: 62px;
+	height: 62px;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+	transition-duration: 1s;
+}
+.efeito-foto-usuario-perfil{
+	width: 185px;
+	height: 185px;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+	transition-duration: 1s;
+}
+
+/*-----------------------------*/
+section .ola-usuario{
+	font-size: 20px;
+	margin-top: 5px;
+}
+section .transparente{
+	position: relative;
+	height: 1000px;
+	/*Se mudar aqui volta ao normal, se nao fica top daquele jeito*/
+	background-color: rgba(0,0,0, .7);
+}
+/*CSS do calendario*/
+#calendar {
+	position: relative;
+	font-family: 'OpenSansLight';
+	font-size: 16px;
+	top: 40px;
+	width: 900px;
+	margin: 0 auto;
+	color: #A9A9A9;
+	background-color: rgba(192,192,192, .1);
+	padding-bottom: 80px;
+	padding-top: 40px;
+	padding-right: 80px;
+	padding-left: 80px;
+	z-index: 1;
+	border-radius: 20px 40px;
+}
+/*----------------------*/
+footer{
+	width: 100%;
+	height: 200px;
+	border-top: 1px solid #A9A9A9;
+	background-color: rgba(0,0,0, .7);
+	z-index: 2;
+	color:white;
+}
+.p_modal_notificacao{
+	color: black;
+	font-weight: bold;
+	font-family: 'OpenSansLight';
+	font-size: 17px;
+}
+.borda-vermelha{
+	border-color:red;
+	color:red;
+}
+
+
+.fc button {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+
+	color: #212529;
+	background: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+/* CSS da pagina de perfil */
+.fundo-transparente-perfil{
+	position: relative;
+	width: 100%;
+	height: 700px;
+	border-radius: 20px 40px;
+	background-color: rgba(0,0,0, .7);
+	font-family: 'OpenSansLight';
+}
+.h1-perfil{
+	position: relative;
+	top: 80px;
+}
+.form-perfil{
+	position: relative;
+	top: 120px;
+}
+
+

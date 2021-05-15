@@ -1,0 +1,12 @@
+------------------------------------------
+No Backup 
+
+Cor do dia: #fcf8e3 (Original) Que agora esta: #B0C4DE (Modificado ver.1.0)
+
+No documento: fullcalendar.min.css
+
+
+-------------------------------------------
+No documento atual:
+
+background-color: rgba(128,128,128, .5)

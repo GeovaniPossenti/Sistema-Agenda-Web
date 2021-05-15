@@ -1,0 +1,100 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url("../fonts/Open_Sans/OpenSans-light.ttf");
+	font-size: 1em;
+}
+@font-face {
+	font-family: 'Franca';
+	src: url("../fonts/Franca/bold.otf");
+	font-size: 1em;
+}
+/*CSS Geral*/
+body {
+    font-family: 'Franca';
+    font-size: 20px;
+    /*Para deixar a imagem de fundo responsivo*/
+    background-image: url('../img/backgroundLogin.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+/*CSS da parte de Login*/
+section .form_login{
+    background-color: rgba(0,0,0, .7);
+    width: 800px;
+    height: 600px;
+    position: relative;
+    top: 50px;
+    border-radius: 20px 40px;
+    color: white;
+}
+section .row{
+    position: relative;
+    top: 260px;
+    left: -50px;
+}
+section .form_group{
+    position: relative;
+    right: 120px;
+}
+section .icon-login{
+    font-size: 150px;
+    position: relative;
+    bottom: 200px;
+    top: -250px;
+    left: 250px;
+    color: 	#DCDCDC;
+    width: 400px;
+    border-bottom: 1px solid white;
+}
+.icones-form {
+    font-size: 20px;
+    color: #343a40;
+    position: relative;
+    top: 35px;
+    left: 130px;
+}
+section .form-check{
+    position: relative;
+    top: 20px;
+    right: 140px;
+}
+input[type=checkbox] {
+    zoom: 1.5;
+}
+section .form-check-label{
+    position: relative;
+    bottom: 2px;
+    font-size: 18px;
+}
+section .botao-login{
+    position: relative;
+    top: 40px;
+    right: 120px;
+}
+section .footer-form h4{
+    position: relative; 
+    font-family: 'OpenSansLight';
+    font-size: 12px;
+    top: 80px;
+    left: 375px;
+}
+section .foto-perfil{
+    border-radius: 20px;
+}
+/* Efeito de aumentar as coisas quando passar o mouse.*/
+.efeito-foto-usuario{
+	width: 178px;
+	height: 178px;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+	transition-duration: 0.5s;
+}
+
+
