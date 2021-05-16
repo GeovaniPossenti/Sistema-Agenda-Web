@@ -68,7 +68,7 @@
 
                     //Criando diretorio para salvar imagem.
                     //Cria na pasta img_usuarios, a pasta do dia do cadastro, dentro uma nova pasta com o ID do usuario.
-                    $diretorio = '../img_usuarios/'.$dataCad.'/'.$ultimoid.'/';
+                    $diretorio = '../App/userImages/'.$dataCad.'/'.$ultimoid.'/';
 
                     //Aqui eu realmente crio o diretorio.
                     mkdir($diretorio, 0777, true);
@@ -126,7 +126,7 @@
             $_SESSION['logged_in'] = true;
             $_SESSION['user_id'] = $user['id_usuario'];
             $_SESSION['user_name'] = $user['nome_usuario'];
-            header('Location: ../agenda.php');
+            header('Location: ../view/agenda.php');
             //Session do alerta.
             $_SESSION['alerts'] = 'logOk';
         }
@@ -214,17 +214,17 @@
                         $stmt->execute();
 
                         //Diretorio que fica responsavel por pegar o nome da foto que esta no banco, e conferir de ele precisa excluir ou nao.
-                        $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
+                        $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
                         
                         //IF para saber se o usuario ja possue uma foto quando ele der update, se ele ja possuir, apaga a antiga e substitui pela nova foto.
                         if (file_exists($diretorio)) {
                             //Se o arquivo que esta no banco existe eu deleto o mesmo e atribuo o valor default ao diretorio.
                             unlink("$diretorio");
                             //Atribuo novamente o valor default ao diretorio.
-                            $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/';
+                            $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/';
                         }else{
                             //Se o arquivo nao existir, eu somente atribuo o valor default ao diretorio.
-                            $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/';
+                            $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/';
                         }
             
                         //Criando as pastas dos usuarios e do dia.
@@ -234,7 +234,7 @@
                         move_uploaded_file($_FILES['fotoUsuarioNew']['tmp_name'], $diretorio.$imagem);
 
                         //Para voltar para a agenda.
-                        header('Location: ../agenda.php');
+                        header('Location: ../view/agenda.php');
                         //Session do alerta.
                         $_SESSION['alerts'] = 'perOk';
                     }elseif(($senhaAtualHash == $senhaBanco) && (empty($imagem))){
@@ -256,7 +256,7 @@
                         $stmt->execute();
 
                         //Para voltar para a agenda.
-                        header('Location: ../agenda.php');
+                        header('Location: ../view/agenda.php');
                         //Session do alerta.
                         $_SESSION['alerts'] = 'perOk';
                     }
@@ -314,17 +314,17 @@
                             $stmt->execute();
 
                             //Diretorio que fica responsavel por pegar o nome da foto que esta no banco, e conferir de ele precisa excluir ou nao.
-                            $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
+                            $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
                             
                             //IF para saber se o usuario ja possue uma foto quando ele der update, se ele ja possuir, apaga a antiga e substitui pela nova foto.
                             if (file_exists($diretorio)) {
                                 //Se o arquivo que esta no banco existe eu deleto o mesmo e atribuo o valor default ao diretorio.
                                 unlink("$diretorio");
                                 //Atribuo novamente o valor default ao diretorio.
-                                $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/';
+                                $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/';
                             }else{
                                 //Se o arquivo nao existir, eu somente atribuo o valor default ao diretorio.
-                                $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/';
+                                $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/';
                             }
                 
                             //Criando as pastas dos usuarios e do dia.
@@ -334,7 +334,7 @@
                             move_uploaded_file($_FILES['fotoUsuarioNew']['tmp_name'], $diretorio.$imagem);
 
                             //Para voltar para a agenda.
-                            header('Location: ../agenda.php');
+                            header('Location: ../view/agenda.php');
                             //Session do alerta.
                             $_SESSION['alerts'] = 'perOk';
                         }elseif(($senhaAtualHash == $senhaBanco) && (empty($imagem))){
@@ -356,7 +356,7 @@
                             $stmt->execute();
 
                             //Para voltar para a agenda.
-                            header('Location: ../agenda.php');
+                            header('Location: ../view/agenda.php');
                             //Session do alerta.
                             $_SESSION['alerts'] = 'perOk';
                         }
@@ -381,7 +381,7 @@
             $stmt = $con->prepare($sql);
             $stmt->execute();
 
-            header('Location: ../agenda.php');
+            header('Location: ../view/agenda.php');
             //Session do alerta.
             $_SESSION['alerts'] = 'img';
         }
@@ -410,7 +410,7 @@
             }
 
             //Volto para a Agenda e exibo um alerta com a session alerts.
-            header('Location: ../agenda.php');
+            header('Location: ../view/agenda.php');
             //Session do alerta.
             $_SESSION['alerts'] = 'WallModif';
             

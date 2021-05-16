@@ -54,7 +54,7 @@
 						<?php if(empty($nomeFoto)){ ?>
 						<i class="fas fa-user-circle"></i>
 						<?php }else{ 
-						$diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;	
+						$diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
 						?>
 						<img src="<?php echo $diretorio;?>" alt="" width="168px" height="168px" class="foto-perfil">
 						<?php } ?>
@@ -82,9 +82,9 @@
 							<label class="form-check-label" style="position:relative; right: 89px; top: -4px;">
 							<!--Para verificar novamente se o cookie existe, se sim, ele mostra um checkbox ja mascado.-->
 							<?php if (isset($_COOKIE['email'])) { ?>
-							<input type="checkbox" class="form-check-input" name="lembrar" style="" checked>
+							<input type="checkbox" class="form-check-input" name="lembrar" checked>
 							<?php }else{ ?>
-							<input type="checkbox" class="form-check-input" name="lembrar" style="">
+							<input type="checkbox" class="form-check-input" name="lembrar">
 							<?php } ?>
 							Lembrar-se</label>
 						</div>

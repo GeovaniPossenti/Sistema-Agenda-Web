@@ -59,7 +59,7 @@
 			$stmt->bindParam(5, $start_sem_barra);
 			$stmt->bindParam(6, $end_sem_barra);
 			$stmt->execute();
-			header("location: ../agenda.php");
+			header("location: ../view/agenda.php");
 			//Session dos alertas.
 			$_SESSION['alerts'] = 'evCad';
 		}
@@ -99,7 +99,7 @@
 			$stmt = $con->prepare($sql_insert_shared);
 			$stmt->execute();
 
-			header("location: ../agenda.php");
+			header("location: ../view/agenda.php");
 			//Session dos alertas.
 			$_SESSION['alerts'] = 'evCad';
 		}
@@ -162,7 +162,7 @@
 				$stmt->bindParam(5, $end_sem_barra);
 				$stmt->execute();
 
-				header("location: ../agenda.php");
+				header("location: ../view/agenda.php");
 				//Session dos alertas.
 				$_SESSION['alerts'] = 'evUpd';
 			}else{
@@ -188,7 +188,7 @@
 					$stmt->execute();
 				}
 
-				header("location: ../agenda.php");
+				header("location: ../view/agenda.php");
 				//Session dos alertas.
 				$_SESSION['alerts'] = 'evUpd';
 			}
@@ -233,7 +233,7 @@
 				$stmt = $con->prepare($sql_insert_shared);
 				$stmt->execute();
 	
-				header("location: ../agenda.php");
+				header("location: ../view/agenda.php");
 				//Session dos alertas.
 				$_SESSION['alerts'] = 'evUpd';
 			}
@@ -269,7 +269,7 @@
 				$stmt = $con->prepare($sql_insert_shared);
 				$stmt->execute();
 
-				header("location: ../agenda.php");
+				header("location: ../view/agenda.php");
 				//Session dos alertas.
 				$_SESSION['alerts'] = 'evUpd';
 			}
@@ -317,7 +317,7 @@
 		}
 
 
-		header("location: ../agenda.php");
+		header("location: ../view/agenda.php");
 		//Session dos alertas.
 		$_SESSION['alerts'] = 'evDel';
 	}

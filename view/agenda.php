@@ -4,7 +4,7 @@
 	@$nome_usuario = $_SESSION['user_name'];
 
 	//Conexao com o banco.
-	include_once('model/Conexao.php');
+	include_once('../model/Conexao.php');
 	$conn = new Conexao;
 	$con = $conn->conectar();
 
@@ -144,37 +144,37 @@
 		<meta charset='utf-8'>
 		<title>Agenda Web</title>
 		<!-- FaviCon -->
-		<link rel="shorcut icon" href="tools/img/favicon.ico">
+		<link rel="shorcut icon" href="../tools/img/favicon.ico">
 		<!------------------------------------------------------------------------------------------------>
 		<?php if(!empty($usuario)){ 
 		//Para nao mostrar imagem de fundo, ou seja, css, quando ele estiver tentando acessar pelo URL.	
 		?>
 		<!--Referencia do Style da Agenda-->
-		<link href='tools/css/styleagenda.css' rel='stylesheet'>
+		<link href='../tools/css/styleagenda.css' rel='stylesheet'>
 		<?php } ?>
 		<!------------------------------------------------------------------------------------------------>
 		<!--Referencia do bootstrap-->
-		<link rel="stylesheet" type="text/css" href="tools/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../tools/lib/bootstrap/css/bootstrap.min.css">
 		<!--Referencia CSS que o calendario usa-->
-		<link href='tools/css/fullcalendar.min.css' rel='stylesheet'>
-		<link href='tools/css/fullcalendar.print.min.css' rel='stylesheet' media='print'>
+		<link href='../tools/css/fullcalendar.min.css' rel='stylesheet'>
+		<link href='../tools/css/fullcalendar.print.min.css' rel='stylesheet' media='print'>
 		<!--Scrips do calendario-->
-		<script src='tools/js/moment.min.js'></script>
+		<script src='../tools/js/moment.min.js'></script>
 		<!--JQuery-->
-		<script src="tools/lib/jquery/jquery-3.3.1.min.js"></script>
-		<script src='tools/js/fullcalendar.min.js'></script>
-		<script src='tools/js/pt-br.js'></script>
+		<script src="../tools/lib/jquery/jquery-3.3.1.min.js"></script>
+		<script src='../tools/js/fullcalendar.min.js'></script>
+		<script src='../tools/js/pt-br.js'></script>
 		<!-- Bootstrap JS -->
-		<script src="tools/lib/bootstrap/js/bootstrap.min.js"></script>
-		<script src="tools/js/bootbox.min.js"></script>
+		<script src="../tools/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../tools/js/bootbox.min.js"></script>
 		<!--Script dos alertas de Adicionar, Atualizar e remover eventos.-->
-		<link rel="stylesheet" href="tools/lib/alertifyjs/css/alertify.min.css" />
-		<link rel="stylesheet" href="tools/lib/alertifyjs/css/themes/default.min.css" />
-		<script src="tools/lib/alertifyjs/alertify.min.js"></script>
+		<link rel="stylesheet" href="../tools/lib/alertifyjs/css/alertify.min.css" />
+		<link rel="stylesheet" href="../tools/lib/alertifyjs/css/themes/default.min.css" />
+		<script src="../tools/lib/alertifyjs/alertify.min.js"></script>
 		<!--Fonts Awesome-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<!--Scrips Gerais do topo-->
-		<script src="tools/js/scriptstop.js"></script>
+		<script src="../tools/js/scriptstop.js"></script>
 		<!--Script do Calendario-->
 		<script>
 			$(document).ready(function() {
@@ -221,7 +221,7 @@
 						//Se a busca for empty, eu mostro os botoes.
 						if(procuraArray == -1 && isEmptyObject(string_array_eventos) == true && string_array_eventos.length != parseInt(id_evento)){
 							$.ajax({
-								url:"control/controle_evento.php?op=altDragAndDrop",
+								url:"../control/controle_evento.php?op=altDragAndDrop",
 								type:"POST",
 								data:{start:start, end:end, id_evento:id_evento},
 								success:function(){
@@ -240,7 +240,7 @@
 							//Aqui eu verifico se a permissao e igual a 1 ou 0.
 							if(posicao == 1){
 								$.ajax({
-									url:"control/controle_evento.php?op=altDragAndDrop",
+									url:"../control/controle_evento.php?op=altDragAndDrop",
 									type:"POST",
 									data:{start:start, end:end, id_evento:id_evento},
 									success:function(){
@@ -259,7 +259,7 @@
 							//Lembrando sempre que quando um array tem apenas um dado, o tamanho do array passa a ter este valor.
 							if(string_array_permissoes.length == 1){
 								$.ajax({
-									url:"control/controle_evento.php?op=altDragAndDrop",
+									url:"../control/controle_evento.php?op=altDragAndDrop",
 									type:"POST",
 									data:{start:start, end:end, id_evento:id_evento},
 									success:function(){
@@ -274,7 +274,7 @@
 							}
 						}else{
 							$.ajax({
-								url:"control/controle_evento.php?op=altDragAndDrop",
+								url:"../control/controle_evento.php?op=altDragAndDrop",
 								type:"POST",
 								data:{start:start, end:end, id_evento:id_evento},
 								success:function(){
@@ -495,20 +495,20 @@
 				<!-- NAVBAR HEADER -->
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="logo-header container">
-						<a class="navbar-brand" href="agenda.php" style="color: white; position:relative; right:20px;"><img id="logotipo" src="tools/img/logo.png" alt="" width="220px" height="100px"></a>
+						<a class="navbar-brand" href="agenda.php" style="color: white; position:relative; right:20px;"><img id="logotipo" src="../tools/img/logo.png" alt="" width="220px" height="100px"></a>
 					</div>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
-								<a class="nav-link header-ul1" href="control/logout.php" style="color: white">Página Inicial</a>
+								<a class="nav-link header-ul1" href="../control/logout.php" style="color: white">Página Inicial</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a style="color: white" class="nav-link dropdown-toggle header-ul2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Funções
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<a class="dropdown-item" href="view/relatorio.php">Relatórios</a>
+									<a class="dropdown-item" href="relatorio.php">Relatórios</a>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
@@ -518,27 +518,27 @@
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 									<a class="dropdown-item" href="#">Cadastrar Eventos<span class="span-top">
 										<video width="530px" height="300px" loop autoplay muted>
-											<source src="tools/img/Guias/Cadastrodeeventos.mp4" type="video/mp4">
+											<source src="../tools/img/Guias/Cadastrodeeventos.mp4" type="video/mp4">
 										</video>
 									</span></a>
 									<a class="dropdown-item" href="#">Editar Eventos<span class="span-top">
 										<video width="530px" height="300px" loop autoplay muted>
-											<source src="tools/img/Guias/Editareventos.mp4" type="video/mp4">
+											<source src="../tools/img/Guias/Editareventos.mp4" type="video/mp4">
 										</video>
 									</span></a>
 									<a class="dropdown-item" href="#">Excluir Eventos<span class="span-top">
 										<video width="530px" height="300px" loop autoplay muted>
-											<source src="tools/img/Guias/Excluireventos.mp4" type="video/mp4">
+											<source src="../tools/img/Guias/Excluireventos.mp4" type="video/mp4">
 										</video>
 									</span></a>
 									<a class="dropdown-item" href="#">Mover Eventos<span class="span-top">
 										<video width="530px" height="300px" loop autoplay muted>
-											<source src="tools/img/Guias/Movereventos.mp4" type="video/mp4">
+											<source src="../tools/img/Guias/Movereventos.mp4" type="video/mp4">
 										</video>
 									</span></a>
 									<a class="dropdown-item" href="#">Selecionar vários dias<span class="span-top">
 										<video width="530px" height="300px" loop autoplay muted>
-											<source src="tools/img/Guias/Variosdias.mp4" type="video/mp4">
+											<source src="../tools/img/Guias/Variosdias.mp4" type="video/mp4">
 										</video>
 									</span></a>
 								</div>
@@ -548,13 +548,13 @@
 								Papeis de Parede
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=default">Pôr do sol<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=1">Estrada<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda1.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=2">Montanha<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda2.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=3">Oceano<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda3.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=4">Neblina<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda4.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=5">Nevasca<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda5.jpg" width="600" height="400px"></span></a>
-									<a class="dropdown-item" href="control/controle_usuario.php?id=wallpaper&picture=6">Topo nevado<span class="span-top"><img src="tools/img/backgroundAgenda/backgroundAgenda6.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=default">Pôr do sol<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=1">Estrada<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda1.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=2">Montanha<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda2.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=3">Oceano<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda3.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=4">Neblina<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda4.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=5">Nevasca<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda5.jpg" width="600" height="400px"></span></a>
+									<a class="dropdown-item" href="../control/controle_usuario.php?id=wallpaper&picture=6">Topo nevado<span class="span-top"><img src="../tools/img/backgroundAgenda/backgroundAgenda6.jpg" width="600" height="400px"></span></a>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
@@ -569,23 +569,23 @@
 						</ul>
 						<div class="row float-right">
 							<div class="foto-usuario" style="margin-right: 15px; margin-top: 1px;">
-								<a href="view/perfil.php">
+								<a href="perfil.php">
 									<!-- Para selecionar se o usuario enviou uma foto ou nao, se sim mostra a mesma, se nao, mostra uma foto default-->
 									<?php if(!empty($dados['foto_usuario'])){ 
 										//Diretorio se o usuario tiver uma foto.
-										$diretorio = 'img_usuarios/'.$dataFoto.'/'.$usuario.'/'.$nomeFoto;
+										$diretorio = '../App/userImages/'.$dataFoto.'/'.$usuario.'/'.$nomeFoto;
 											?>
 										<img src="<?php echo "$diretorio"; ?>" width="60px" height="60px" class="foto-perfil">
 									<?php } else { 
 										//Diretorio se usuario nao possuir uma foto.
-										$diretorio = 'tools/img/logo-primary.jpg';
+										$diretorio = '../tools/img/logo-primary.jpg';
 										?> 
 										<img src="<?php echo "$diretorio"; ?>" width="60px" height="60px" class="foto-perfil">
 									<?php } ?>
 								</a>
 							</div>
 							<div class="botao-logout" style="margin-top: 13px;">
-								<a href="control/logout.php?logout=on"><input type="button" id="botao-logout" class="btn btn-outline-danger" value="Logout"></a></p> 
+								<a href="../control/logout.php?logout=on"><input type="button" id="botao-logout" class="btn btn-outline-danger" value="Logout"></a></p>
 							</div>
 						</div>
 					</div>
@@ -625,10 +625,9 @@
 									<td><?php echo $array_dados_select_contatos['nome_contato']; ?></td>
 									<td><?php echo $array_dados_select_contatos['email_contato']; ?></td>
 									<td><a href="?id=alt&id_contato=<?php echo $array_dados_select_contatos['id_contato'];?>"><i class="far fa-edit" title="Editar Contato"></i></a></td>
-									<td><a style="text-decoration:none;" href="control/controle_contatos.php?id=del&id_contato=<?php echo $array_dados_select_contatos['id_contato'];?>"><i class="far fa-trash-alt" title="Excluir Contato"></i></a></td>
+									<td><a style="text-decoration:none;" href="../control/controle_contatos.php?id=del&id_contato=<?php echo $array_dados_select_contatos['id_contato'];?>"><i class="far fa-trash-alt" title="Excluir Contato"></i></a></td>
 								</tr>
 									<?php } ?>
-								</tr>
 							</table>
 						</div>
 					</div>
@@ -646,7 +645,7 @@
 						</div>
 						<div class="modal-body">
 							<!--FORMULARIO DE CADASTRO DE CONTATOS-->
-							<form class="form-horizontal" method="POST" action="control/controle_contatos.php?id=cad">
+							<form class="form-horizontal" method="POST" action="../control/controle_contatos.php?id=cad">
 								<input type="hidden" name="idusuario" value="<?php print($usuario) ?>">
 								<div class="form-group">
 									<label for="" class="">Nome do Contato</label>
@@ -682,7 +681,7 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="history.go(-1)"><span aria-hidden="true">&times;</span></button>
 						</div>
 						<div class="modal-body">
-							<form class="form-horizontal" method="POST" action="control/controle_contatos.php?id=alt">
+							<form class="form-horizontal" method="POST" action="../control/controle_contatos.php?id=alt">
 								<input type="hidden" name="id_contato" value="<?php echo @$id_contato_editar; ?>">
 								<div class="form-group">
 									<label for="" class="">Nome do Contato</label>
@@ -721,7 +720,7 @@
 						</div>
 						<div class="modal-body">
 							<!--FORMULARIO DE CADASTRO DE EVENTOS-->
-							<form class="form-horizontal" method="POST" action="control/controle_evento.php?op=cad">
+							<form class="form-horizontal" method="POST" action="../control/controle_evento.php?op=cad">
 								<input type="hidden" name="idusuario" value="<?php print($usuario) ?>">
 								<div class="form-group">
 									<label for="" class="">Nome do Evento</label>
@@ -843,7 +842,7 @@
 										<input type="button" class="btn btn-canc-vis btn-info" id="botaoEditar" value="Editar" disabled>
 									</li>
 									<li class="nav-item">
-										<form action="control/controle_evento.php?op=del" method="post">
+										<form action="../control/controle_evento.php?op=del" method="post">
 											<input type="hidden" class="form-control" name="id" id="id">
 											<input type="submit" class="btn btn-danger" value="Excluir" id="botaoExcluir" style="position:relative; left:10px;" disabled>
 										</form>
@@ -853,7 +852,7 @@
 						</div>
 						<!--Formulario de edicao dos eventos-->
 						<div class="form" id="formEditar">
-							<form class="form-horizontal" method="POST" action="control/controle_evento.php?op=alt" style="position: relative; margin-left: 15px; margin-right:15px; margin-top:-20px;">
+							<form class="form-horizontal" method="POST" action="../control/controle_evento.php?op=alt" style="position: relative; margin-left: 15px; margin-right:15px; margin-top:-20px;">
 								<div class="form-group col-sm-10">
 									<!--Id do evento.-->
 									<input type="hidden" class="form-control" name="id" id="id">
@@ -948,7 +947,7 @@
 		</section>
 
 		<!--Scripts Tools/JS-->
-		<script src="tools/js/scripsback.js"></script>
+		<script src="../tools/js/scripsback.js"></script>
 		<!--Chaves do Session-->
 		<?php } ?>
 	</body>
@@ -956,7 +955,7 @@
 <?php 
 	/* TUDO ISSO AQUI È PARA A NOTIFICAÇÃO DO EVENTO, QUANDO ELE TIVER EVENTOS NAQUELE DIA/HORA, ELE EXIBE A NOTIFICAÇAO. */
 	//Include dos Alertas.
-	include_once('view/alerts.php');
+	include_once('alerts.php');
 	//Defino o date default para SP.
 	date_default_timezone_set('America/Sao_Paulo');
 	//Pego a data atual do dia.

@@ -57,7 +57,7 @@
     
     //Para selecionar se o usuario enviou uma foto ou nao, se sim mostra a mesma, se nao, mostra uma foto default.
     if(!empty($dados['foto_usuario'])){ 
-        $diretorio = '../img_usuarios/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
+        $diretorio = '../App/userImages/'.$dataFoto.'/'.$id_usuario.'/'.$nomeFoto;
     }else{ 
         $diretorio = '../tools/img/logo-primary.jpg';
     }

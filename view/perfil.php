@@ -98,7 +98,7 @@
                             <li class="nav-item active">
                                 <div class="container">
                                     <div class="row float-left">
-                                        <a href="../agenda.php"><input type="button" style="width:150px; margin-top: 13px;" class="btn btn-outline-info" onclick="" value="<< Voltar"></a></p> 
+                                        <a href="agenda.php"><input type="button" style="width:150px; margin-top: 13px;" class="btn btn-outline-info" onclick="" value="<< Voltar"></a></p>
                                     </div>
                                 </div>
                             </li>
@@ -169,7 +169,7 @@
                             <div class=" float-left">
                                 <!-- Para selecionar se o usuario enviou uma foto ou nao, se sim mostra a mesma, se nao, mostra uma foto default-->
                                 <?php if(!empty($dados['foto_usuario'])){ 
-                                    $diretorio = '../img_usuarios/'.$dataFoto.'/'.$idusuario.'/'.$nomeFoto;
+                                    $diretorio = '../App/userImages/'.$dataFoto.'/'.$idusuario.'/'.$nomeFoto;
                                     ?>
                                     <img src="<?php echo "$diretorio"; ?>" width="180px" height="180px" class="foto-perfil">
                                 <?php } else { 
@@ -183,7 +183,7 @@
                                 <!--Aonde eu passo o ID do usuario e o nome do diretorio para excluir.-->
                                 <!--Aqui verifico se o diretorio foi para o DEFAULT, se sim atribuo um diretorio do usuario. Apenas para nao excluir a foto DEFAULT.-->
                                 <?php if ($diretorio == '../tools/img/logo-primary.jpg') {
-                                    $diretorio = '../img_usuarios/'.$dataFoto.'/'.$idusuario.'/'.$nomeFoto;
+                                    $diretorio = '../App/userImages/'.$dataFoto.'/'.$idusuario.'/'.$nomeFoto;
                                 }else{?>
                                 <form action="../control/controle_usuario.php?id=del" method="POST">
                                     <input type="hidden" name="idusuario" value="<?php echo $idusuario; ?>">

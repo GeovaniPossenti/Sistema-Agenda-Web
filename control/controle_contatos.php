@@ -23,7 +23,7 @@
         $email_usuario = $array_select_usuarios['email_usuario'];
 
         if($emailContato == $email_usuario){
-            header('Location: ../agenda.php');
+            header('Location: ../view/agenda.php');
             //Session do alerta.
             $_SESSION['alerts'] = 'contatoIgualAoUsuario';
         }else{
@@ -35,7 +35,7 @@
 
             //Se aquele email nao existir, ele volta pra agenda e exibe mensagem de erro.
             if (count($ArrayselectEmail) <= 0){
-                header('Location: ../agenda.php');
+                header('Location: ../view/agenda.php');
                 //Session do alerta.
                 $_SESSION['alerts'] = 'emailContatoInv';
             }else{
@@ -55,11 +55,11 @@
                     $stmt->execute();
         
                     //e volta para a agenda com um alerta.
-                    header('Location: ../agenda.php');
+                    header('Location: ../view/agenda.php');
                     //Session do alerta.
                     $_SESSION['alerts'] = 'contatoCadOk';
                 }else{
-                    header('Location: ../agenda.php');
+                    header('Location: ../view/agenda.php');
                     //Session do alerta.
                     $_SESSION['alerts'] = 'emailContatoJaCadastrado';
                 }
@@ -78,7 +78,7 @@
 
         //Sessions dos alertas.
         $_SESSION['alerts'] = 'altContatosOk';
-        header('Location: ../agenda.php');
+        header('Location: ../view/agenda.php');
         
     }elseif($op == 'del'){
         $id_contato = $_GET['id_contato'];
@@ -91,7 +91,7 @@
         $stmt->execute();
 
         //e volta para a agenda com um alerta.
-        header('Location: ../agenda.php');
+        header('Location: ../view/agenda.php');
         //Session do alerta.
         $_SESSION['alerts'] = 'contatoDelOk';
     }
