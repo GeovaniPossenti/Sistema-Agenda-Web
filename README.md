@@ -18,7 +18,7 @@ Existe a probabilidade das imagens ficarem com menos resolução que o comum, pa
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| blah |  ![Screenshot_1](https://user-images.githubusercontent.com/79884348/118381362-884c9280-b5c0-11eb-9904-50144a8da83a.png)
+| ![Screenshot_1](https://user-images.githubusercontent.com/79884348/118381362-884c9280-b5c0-11eb-9904-50144a8da83a.png) | 
 |![Screenshot_2](https://user-images.githubusercontent.com/79884348/118381364-8da9dd00-b5c0-11eb-9579-87f6fb467ac1.png)|
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
